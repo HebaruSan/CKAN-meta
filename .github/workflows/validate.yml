@@ -1,0 +1,22 @@
+name: Validate ckans
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        types:
+            - opened
+            - synchronize
+            - reopened
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get CKAN-meta repo
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - name: Test modified ckans
+              uses: HebaruSan/xKAN-meta_testing@github_action
+              with:
+                  source: commits
