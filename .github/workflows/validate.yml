@@ -9,7 +9,7 @@ on:
             - synchronize
             - reopened
 jobs:
-    validate:
+    Validate:
         runs-on: ubuntu-latest
         steps:
             - name: Get CKAN-meta repo
