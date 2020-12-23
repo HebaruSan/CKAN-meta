@@ -19,6 +19,9 @@
     ],
     "depends": [
         {
+            "name": "MOLE-PlayMode"
+        },
+        {
             "name": "ModuleManager"
         },
         {
@@ -26,9 +29,6 @@
         },
         {
             "name": "KerbalActuators"
-        },
-        {
-            "name": "ClassicStockResources"
         },
         {
             "name": "BarisBridge"
@@ -80,8 +80,13 @@
             "install_to": "GameData/WildBlueIndustries",
             "filter_regexp": [
                 ".*\\.pdb$",
-                "SampleCraft"
+                "SampleCraft",
+                "Templates"
             ]
+        },
+        {
+            "find": "MOLE/Templates/Common",
+            "install_to": "GameData/WildBlueIndustries/MOLE/Templates"
         },
         {
             "find": "VAB",
